@@ -1,14 +1,16 @@
-import React from "react";
-import Chat from "./components/Chat";
 
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Chat from "./components/Chat";
+import Landing from "./components/Landing";
+import Normal from "./components/Normal";
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-2xl font-bold text-center my-4">
-        Farmer Advisory Chatbot 🌾
-      </h1>
-      <Chat />
-    </div>
+       <Routes>
+          <Route path="/" element={<Landing />} />
+           <Route path="/chat" element={<Chat />} />
+           <Route path="/advice" element={<Normal />} />
+          
+        </Routes>
   );
 }
 

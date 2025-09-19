@@ -1,0 +1,426 @@
+:root {
+    --primary-green: #4CAF50; /* A vibrant, natural green */
+    --light-green: #E8F5E9; /* Very light green for backgrounds */
+    --dark-green: #388E3C;
+    --text-color: #333;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-green);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--primary-green);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.lang-selector select {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+main {
+    padding-top: 80px; /* Offset for fixed header */
+}
+
+.page-section {
+    display: none;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    min-height: calc(100vh - 80px); /* Fill screen minus header height */
+    box-shadow: 0 0 10px var(--shadow-color);
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.page-section.active {
+    display: block;
+}
+
+/* Home Section Styles */
+#home {
+    background: url('https://images.unsplash.com/photo-1594955375416-d3c544d6731d') no-repeat center center/cover;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content .intro-text {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--dark-green);
+}
+
+/* Input Section Styles */
+#input {
+    background-color: #fff;
+}
+
+#yield-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#yield-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#yield-form input,
+#yield-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.input-with-button {
+    display: flex;
+    gap: 10px;
+}
+
+.input-with-select {
+    display: flex;
+    gap: 10px;
+}
+
+.input-with-select input {
+    flex-grow: 1;
+}
+
+#yield-form .form-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#yield-form .form-button:hover {
+    background-color: var(--dark-green);
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 1.5rem;
+    font-weight: 400;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Dashboard Section Styles */
+#dashboard {
+    background-color: var(--light-green);
+    text-align: center;
+}
+
+.result-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin-bottom: 2rem;
+}
+
+.result-card h3 {
+    color: var(--dark-green);
+}
+
+.yield-value {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin: 0;
+}
+
+.chart-container {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Knowledge Hub Styles */
+#knowledge {
+    background-color: #fff;
+}
+
+.knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.knowledge-card {
+    background-color: var(--light-green);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.knowledge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.knowledge-card h3 {
+    color: var(--dark-green);
+    border-bottom: 2px solid var(--primary-green);
+    padding-bottom: 0.5rem;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: var(--light-green);
+    text-align: center;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.chatbot-toggle-button, .voice-assistant-button {
+    background-color: var(--primary-green);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.chatbot-toggle-button:hover, .voice-assistant-button:hover {
+    transform: scale(1.1);
+}
+
+.voice-assistant-button.active {
+    background-color: #ff5722; /* A color to indicate listening */
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1.1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1.1); }
+}
+
+.chatbot-box {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chatbot-box.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.chatbot-header {
+    background-color: var(--dark-green);
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 15px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: var(--light-green);
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#chatbot-input-field {
+    flex-grow: 1;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+}
+
+#chatbot-send-button {
+    background: none;
+    border: none;
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#chatbot-send-button:hover {
+    color: var(--dark-green);
+}
+
+.voice-assistant-button {
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-green);
+    color: white;
+    box-shadow: none;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.voice-assistant-button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    .page-section {
+        padding: 2rem 1rem;
+    }
+
+    .knowledge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chatbot-box {
+        width: 90%;
+        right: 5%;
+        bottom: 70px;
+    }
+}
