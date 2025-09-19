@@ -33,7 +33,7 @@ const FormPage = () => {
     setResponse(null);
 
     try {
-      const res = await fetch("http://localhost:8000/predict-and-suggest", {
+      const res = await fetch("https://cropmitrabackend.onrender.com/predict-and-suggest", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
